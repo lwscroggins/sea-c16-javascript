@@ -13,10 +13,12 @@ function oldestLivingParent(people) {
     }
   });
   for(i=0; i<=tempPeople.length; i++) {
-    if(tempPeople[i]===tempParents[i]) {
-      parents.push(tempParents[i]);
-      daddy = parents[0];
-      return daddy;
+    for(j=0; j<=tempPeople.length; j++){
+      if(tempPeople[i]===tempParents[j]) {
+        parents.push(tempParents[j]);
+        daddy = parents[0];
+        return daddy;
+      }
     }
   }
 }
